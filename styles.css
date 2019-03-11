@@ -1,0 +1,97 @@
+:root {
+    box-sizing: border-box;
+    --darkest: #051e3e;
+    --dark: #251e3e;
+    --medium: #451e3e;
+    --light: #651e3e;
+    --lightest:  #851e3e;
+    
+    --font-color: oldlace;
+    --background: var(--dark);
+
+    color: var(--font-color);
+    font-size: calc(0.5em + 1vw);
+}
+
+* + * {
+    margin-left: 0.5em;
+}
+
+body {
+    background-color: var(--dark);
+    margin: 0;
+}
+
+header {
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+header > h1 {
+    border-bottom: 1px solid var(--lightest)
+}
+nav {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+nav ul > li {
+    display: inline-block;
+}
+
+main {
+    padding: 0 6em;
+    background: linear-gradient(to right, var(--dark) 0%, var(--medium) 6%,var(--medium) 94%,var(--dark) 100%)
+}
+main > div {
+    background-color: var(--medium);
+    height: 100%;
+    padding: 1em;
+}
+
+section {
+    background: linear-gradient(to right, var(--light), var(--lightest));
+    height: 30em;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    display: grid;
+    margin: 0;
+}
+.section-content {
+    background: var(--background);
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.section-content > * {
+    margin-left: 0;
+}
+p {
+    margin-top: 0;
+}
+
+button {
+    background: var(--lightest);
+    color: var(--font-color);
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    box-shadow: -3px 2px 2px 0px rgba(0, 0, 0, 0.1)
+}
+
+button:hover {
+    cursor: pointer;
+    background: var(--light);
+}
+
+button:active {
+    transform: translateY(0.2em);
+    color: #f9f4eb;
+    ;
+}
