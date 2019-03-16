@@ -83,7 +83,6 @@ nav a:hover {
 
 main {
     background: linear-gradient(to right, var(--light), var(--lightest));
-    border-radius: 0.5em;
     display: grid;
     height: 30em;
     margin: 0;
@@ -92,7 +91,6 @@ main {
 
 .section-content {
     background: var(--background);
-    border-radius: 0.5em;
     padding: 1em;
 }
 
