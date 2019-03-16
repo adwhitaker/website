@@ -17,19 +17,41 @@
     margin-left: 0.5em;
 }
 
+@media (max-width: 30em) {
+    :root {
+        font-size: 1em;
+    }
+}
+
 body {
-    background-color: var(--dark);
     margin: 0;
+    background: linear-gradient(to right, var(--dark) 0%, var(--medium) 6%,var(--medium) 94%,var(--dark) 100%)
+}
+
+.gradient-container {
+    background-color: var(--medium);
+    margin: 0 3em;
+    height: 100%;
+    padding: 1em;
+}
+
+@media (max-width: 30em) {
+    .gradient-container {
+        margin: 0;
+        padding: 0.5em;
+    }
 }
 
 header {
-    border-radius: 1em;
     margin-bottom: 1em;
 }
 
 header > h1 {
-    border-bottom: 1px solid var(--lightest)
+    border-bottom: 1px solid var(--lightest);
+    font-family: Megrim;
 }
+
+
 nav {
     margin: 0;
 }
@@ -38,21 +60,42 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0.5em 1em 0.5em 0;
+    display: flex;
+    justify-content: flex-end
 }
 
 nav ul > li {
     display: inline-block;
+    font-family: 'Rock Salt'
 }
 
-main {
-    padding: 0 6em;
-    background: linear-gradient(to right, var(--dark) 0%, var(--medium) 6%,var(--medium) 94%,var(--dark) 100%)
+nav ul > li + li {
+    margin-left: 2em;
 }
-main > div {
-    background-color: var(--medium);
-    height: 100%;
-    padding: 1em;
+
+nav a {
+    color: var(--font-color);
+    text-decoration: none;
 }
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 30em) {
+    nav ul {
+        margin: 0.5em 1em;
+        display: block;
+    }
+    nav ul > li {
+        margin: 0;
+        display: block;
+    }
+    nav ul > li + li {
+        margin: 0;
+    }
+}
+
 
 section {
     background: linear-gradient(to right, var(--light), var(--lightest));
@@ -93,5 +136,5 @@ button:hover {
 button:active {
     transform: translateY(0.2em);
     color: #f9f4eb;
-    ;
+
 }
