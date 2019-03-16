@@ -1,19 +1,17 @@
 :root {
-    box-sizing: border-box;
     --darkest: #051e3e;
     --dark: #251e3e;
     --medium: #451e3e;
     --light: #651e3e;
-    --lightest:  #851e3e;
-    
+    --lightest: #851e3e;
     --font-color: oldlace;
     --background: var(--dark);
-
+    box-sizing: border-box;
     color: var(--font-color);
     font-size: calc(0.5em + 1vw);
 }
 
-* + * {
+*+* {
     margin-left: 0.5em;
 }
 
@@ -24,52 +22,39 @@
 }
 
 body {
-    margin: 0;
-    background: linear-gradient(to right, var(--dark) 0%, var(--medium) 6%,var(--medium) 94%,var(--dark) 100%)
-}
-
-.gradient-container {
-    background-color: var(--medium);
-    margin: 0 3em;
-    height: 100%;
-    padding: 1em;
+    background: linear-gradient(to right, var(--dark) 0%, var(--medium) 6%, var(--medium) 94%, var(--dark) 100%);
+    margin: 1em 3em;
 }
 
 @media (max-width: 30em) {
-    .gradient-container {
-        margin: 0;
-        padding: 0.5em;
+    body {
+        margin: 1.25em;
     }
 }
 
-header {
-    margin-bottom: 1em;
-}
-
-header > h1 {
+header>h1 {
     border-bottom: 1px solid var(--lightest);
     font-family: Megrim;
 }
-
 
 nav {
     margin: 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0.5em 1em 0.5em 0;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0;
 }
 
-nav ul > li {
+nav ul>li {
     display: inline-block;
     font-family: 'Rock Salt'
 }
 
-nav ul > li + li {
+nav ul>li+li {
     margin-left: 2em;
 }
 
@@ -84,57 +69,54 @@ nav a:hover {
 
 @media (max-width: 30em) {
     nav ul {
+        display: block;
         margin: 0.5em 1em;
-        display: block;
     }
-    nav ul > li {
+    nav ul>li {
+        display: block;
         margin: 0;
-        display: block;
     }
-    nav ul > li + li {
+    nav ul>li+li {
         margin: 0;
     }
 }
 
-
-section {
+main {
     background: linear-gradient(to right, var(--light), var(--lightest));
-    height: 30em;
-    padding: 0.2em;
     border-radius: 0.5em;
     display: grid;
+    height: 30em;
     margin: 0;
+    padding: 0.2em;
 }
+
 .section-content {
     background: var(--background);
     border-radius: 0.5em;
     padding: 1em;
 }
 
-.section-content > * {
+.section-content + .section-content {
+    margin-top: 0.2em;
     margin-left: 0;
-}
-p {
-    margin-top: 0;
 }
 
 button {
     background: var(--lightest);
-    color: var(--font-color);
     border: none;
-    padding: 0.5em 1em;
     border-radius: 0.5em;
+    box-shadow: -3px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    color: var(--font-color);
     font-size: 1.1em;
-    box-shadow: -3px 2px 2px 0px rgba(0, 0, 0, 0.1)
+    padding: 0.5em 1em;
 }
 
 button:hover {
-    cursor: pointer;
     background: var(--light);
+    cursor: pointer;
 }
 
 button:active {
-    transform: translateY(0.2em);
     color: #f9f4eb;
-
+    transform: translateY(0.2em);
 }
